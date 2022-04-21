@@ -13,7 +13,7 @@ string1 = "Hello"
 string2 = "There"
 print(string1 + " " + string2)
 
-Example 2: Polymorphism Within Classes
+**Example 2: Polymorphism Within Classes**
 Below is an example of polymorphism within a class. It takes two different types of objects, cars and trains, and uses the same variable names to describe them.
 
 class Car:
@@ -55,10 +55,10 @@ Example 1:
 Example 2:
  
 
-Do It Yourself:
+**Do It Yourself:**
 Now that you have tried these examples, create a class using polymorphism which compares two countries, the United States and Germany. Define their capitals, primary language, and GDP. 
 
-Do It Yourself Solution:
+**Do It Yourself Solution:**
 #This creates the United States Class
 class unitedStates:
     #defines the variables for capital, language, and gdp
