@@ -57,7 +57,7 @@ for vehicle in (car1, car2, train1):
 Below are what your outputs should look like for your example code.
 
 Example 1:
-![Example 1](poly output 1.PNG) 
+![Example 1](https://github.com/nhagen2019/Teach_OOP_py/blob/master/Lesson%207:%20Polymorphism/poly%20output%201.PNG) 
  
 Example 2:
  
