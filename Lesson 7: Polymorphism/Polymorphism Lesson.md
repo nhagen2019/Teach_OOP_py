@@ -65,8 +65,9 @@ Example 2:
 
 Now that you have tried these examples, create a class using polymorphism which compares two countries, the United States and Germany. Define their capitals, primary language, and GDP. 
 
-```
+
 **Do It Yourself Solution:**
+```
 #This creates the United States Class
 class unitedStates:
     #defines the variables for capital, language, and gdp
@@ -119,7 +120,7 @@ for country in (USA, GER):
     country.lang()
     country.gdp()
 ```
-
+**Do It Yourself Example Output:**
 
 Sources:
 
