@@ -1,7 +1,7 @@
 Polymorphism is the concept that a single entity can represent many different types within a program. It allows programmers to define methods within the child class while having the same name as what is defined in the parent class. Essentially, the same function can be used for different types. In Python you can use different class methods, functions, or objects to define polymorphism. Below are some examples of polymorphism and how it is used within python.
 
-**Example 1: Basic Polymorphism
-**Below are some basic examples of polymorphism. The first example uses integers, and the second example uses strings.
+**Example 1: Basic Polymorphism**
+Below are some basic examples of polymorphism. The first example uses integers, and the second example uses strings.
 
 #polymorphism with numbers
 number1 = 1
