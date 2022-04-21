@@ -57,6 +57,7 @@ for vehicle in (car1, car2, train1):
 Below are what your outputs should look like for your example code.
 
 Example 1:
+![Example 1](poly output 1.PNG) 
  
 Example 2:
  
