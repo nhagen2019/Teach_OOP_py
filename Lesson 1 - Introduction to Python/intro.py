@@ -14,6 +14,7 @@ Linux:For Linux, Python comes bundled with the linux.
 
 '''
 #first program in Python
+#Prints 'Hello!!' to the console
 # Script Begins 
   
 print("Hello!!") 
@@ -36,18 +37,26 @@ going ahead with python programming.
 '''
 
 # Variables
+#Declares variable x with a value of 5
 x = 5
-y = "John"
+#Declares variable y with a value of John
+y = "John" 
+#Prints variables x and y to the console
 print(x)
 print(y)
 
 # String Operations
+#Creates variable a with a string value of Hello
 a = "Hello"
+#Creates variable b with a string value of World
 b = "World"
+#Prints the strings to the console
 print(a+b)
 
 # For loop travesing a list
+#Creates the array and assigns values to it
 fruits = ["apple", "banana", "cherry"]
+#Prints the Array
 for x in fruits:
   print(x)
 
