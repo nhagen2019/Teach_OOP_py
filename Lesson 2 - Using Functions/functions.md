@@ -7,7 +7,7 @@
 
 
 
-*   A function is a block of code which only runs when it is called.It performs a specific task.
+*   A function is a block of code which only runs when it is called. It performs a specific task.
 *   You can pass data, known as parameters, into a function.
 *   A function can return data as a result to the calling function.
 
@@ -143,12 +143,12 @@ print(look())
 
 
 
-#### With this short and crisp refresher on functions in python, the Lesson will now walk you through some in-built functions in python. It is expected that you have preliminary programming knowledge (Iterators, Conditions, Syntax, Semantics, etc.) 
+#### With this short and crisp refresher on functions in python, below you will find a walkthrough on some in-built functions in Python. It is expected that you have preliminary programming knowledge (Iterators, Conditions, Syntax, Semantics, etc.) 
 
 
 # MODULE 1: CREATING  A REMINDER APP
 
-Before heading further to module 1, It is important to know where the functions of python are stored. Python uses the concept of libraries to store functions and classes (later in this course).
+Before heading further to Module 1, It is important to know where the functions of Python are stored. Python uses the concept of libraries to store functions and classes (later in this course).
 
 
 # The Python Standard Library
@@ -159,12 +159,12 @@ Before heading further to module 1, It is important to know where the functions 
 While [The Python Language Reference](https://docs.python.org/3/reference/index.html#reference-index) describes the exact syntax and semantics of the Python language, this library reference manual describes the standard library that is distributed with Python. It also describes some of the optional components that are commonly included in Python distributions.
 
 
-### Task 1: Create a python script to set a reminder in about a fix duration of time that opens a youtube video using the concept of functions in python. 
+### Task 1: Create a Python script to set a reminder in a fix duration of time that opens a Youtube video using functions in Python. 
 
-(This can be used to take a break from long and continuous computer hours)
+(This can be used to take a break from extended computer usage.)
 
 
-### Assistance: 
+### Hints: 
 
 
 
@@ -172,12 +172,12 @@ While [The Python Language Reference](https://docs.python.org/3/reference/index.
 *   Check on Resources to get the solution 
 
 
-### TASK 2: There is a message to be decoded. There have been pictures of file format .jpg which have to be renamed in such a way that the digits in the names have to be removed which upon sorting would show a message. There is a folder containing all those images along this lesson. Write a python script to do the needful 
+### TASK 2: There is a message to be decoded. There have been pictures of file format .jpg which have to be renamed in such a way that the digits in the names have to be removed which upon sorting would show a message. There is a folder containing all those images along this lesson. Write a python script to decode the message.
 
-(Wait What??....Yes! This can be playful with your friends.)
+(Wait What??....Yes! This can be used as a prank with your friends.)
 
 
-### Assistance: 
+### Hints: 
 
 
 
