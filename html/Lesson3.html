@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Learn OOP with Python</title>
+  <style>
+    body {
+      background-color: black;
+    }
+    .center {
+      margin: auto;
+      width: 50%;
+      color: white;
+
+      padding: 10px;
+    }
+
+    .center1 {
+      margin: auto;
+      width: 50%;
+      text-align: center;
+      padding: 10px;
+      word-spacing: 50px;
+    }
+
+    .left {
+      float: left;
+      width: 33%;
+      text-align: center;
+      padding: 1px;
+      height: 600px;
+    }
+
+    .right {
+      float: right;
+      
+      width: 33%;
+      padding: 1px;
+      height: 600px;
+    }
+
+  h1, h2, a {
+    color:white;
+  } 
+   .head
+   {
+    padding-top: 60px;
+   }
+   
+   
+
+</style>
+
+
+
+
+</head>
+
+<body>
+    <p class = "center1">
+        <a href = "proj.html">Home</a> 
+        <a href = "Lesson1.html">Lesson_1</a>
+        <a href = "Lesson2.html">Lesson_2</a>
+        <a href = "Lesson4.html">Lesson_4</a>
+        <a href = "Lesson5.html">Lesson_5</a>
+        <a href = "Lesson6.html">Lesson_6</a>
+      
+    
+    
+    
+    
+    </p>
+<div class = "center">
+    <h1>Object-Oriented Basics Using Python</h1>
+<p>(Source: <a href="https://www.tutorialspoint.com/python/python_classes_objects.htm">https://www.tutorialspoint.com/python/python_classes_objects.htm</a>)</p>
+<p>Python has been an object-oriented language since it existed. Because of this, creating and using classes and objects are downright easy. This chapter helps you become an expert in using Python's object-oriented programming support.If you do not have any previous experience with object-oriented (OO) programming, you may want to consult an introductory course on it or at least a tutorial of some sort so that you have a grasp of the basic concepts.However, here is a small introduction of Object-Oriented Programming (OOP) to bring you at speed −</p>
+<h2>Overview of OOP Terminology</h2>
+<ul>
+<li>Class − A user-defined prototype for an object that defines a set of attributes that characterize an object of the class. The attributes are data members (class variables and instance variables) and methods, accessed via dot notation.</li>
+<li>Class variable − A variable that is shared by all instances of a class. Class variables are defined within a class but outside any of the class's methods. Class variables are not used as frequently as instance variables are.</li>
+<li>Data member − A class variable or instance variable that holds data associated with a class and its objects.</li>
+<li>Function overloading − The assignment of more than one behavior to a particular function. The operation performed varies by the types of objects or arguments involved.</li>
+<li>Instance variable − A variable that is defined inside a method and belongs only to the current instance of a class.</li>
+<li>Inheritance − The transfer of the characteristics of a class to other classes that are derived from it.</li>
+<li>Instance − An individual object of a certain class. An object obj that belongs to a class Circle, for example, is an instance of the class Circle.</li>
+<li>Instantiation − The creation of an instance of a class.</li>
+<li>Method − A special kind of function that is defined in a class definition.</li>
+<li>Object − A unique instance of a data structure that's defined by its class. An object comprises both data members (class variables and instance variables) and methods.</li>
+<li>Operator overloading − The assignment of more than one function to a particular operator.</li>
+</ul>
+<p>EXAMPLE:</p>
+<pre><code>class Student:
+   'Common base class for all Students'
+   stuCount = 0
+
+   def __init__(self, name, marks):
+      self.name = name
+      self.marks = marks
+      Student.stuCount += 1
+
+   def displayCount(self):
+     print &quot;Total Student %d&quot; % Student.stuCount
+
+   def displayStudent(self):
+      print &quot;Name : &quot;, self.name,  &quot;, marks: &quot;, self.marks
+</code></pre>
+<h2><strong>Python Objects (Instances)</strong></h2>
+<p>(Source: <a href="https://realpython.com/python3-object-oriented-programming/">https://realpython.com/python3-object-oriented-programming/</a>)</p>
+<p>While the class is the blueprint, an <em>instance</em> is a copy of the class with <em>actual</em> values, literally an object belonging to a specific class. It's not an idea anymore; it's an actual animal, like a dog named Roger who's eight years old.</p>
+<p>Put another way, a class is like a form or questionnaire. It defines the needed information. After you fill out the form, your specific copy is an instance of the class; it contains actual information relevant to you.</p>
+<p>You can fill out multiple copies to create many different instances, but without the form as a guide, you would be lost, not knowing what information is required. Thus, before you can create individual instances of an object, we must first specify what is needed by defining a class.</p>
+<h3>CREATING CLASS AND OBJECT IN PYTHON</h3>
+<pre><code>class Parrot:
+
+    # class attribute
+    species = &quot;bird&quot;
+
+    # instance attribute
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+</code></pre>
+<h1>instantiate the Parrot class</h1>
+<pre><code>blu = Parrot(&quot;Blu&quot;, 10)
+woo = Parrot(&quot;Woo&quot;, 15)
+</code></pre>
+<h1>access the class attributes</h1>
+<pre><code>print(&quot;Blu is a {}&quot;.format(blu.__class__.species))
+print(&quot;Woo is also a {}&quot;.format(woo.__class__.species))
+</code></pre>
+<h1>access the instance attributes</h1>
+<pre><code>print(&quot;{} is {} years old&quot;.format( blu.name, blu.age))
+print(&quot;{} is {} years old&quot;.format( woo.name, woo.age))
+</code></pre>
+<h2>**Python Inheritance **</h2>
+<p>(Source: <a href="https://www.geeksforgeeks.org/oop-in-python-set-3-inheritance-examples-of-object-issubclass-and-super/">https://www.geeksforgeeks.org/oop-in-python-set-3-inheritance-examples-of-object-issubclass-and-super/</a></p>
+<p>Inheritance is one of the core concepts of object-oriented programming (OOP) languages. It is a mechanism where you can to derive a class from another class for a hierarchy of classes that share a set of attributes and methods.</p>
+
+
+</div>
+
+
+</body>
+</html>

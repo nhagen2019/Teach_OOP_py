@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Learn OOP with Python</title>
+  <style>
+    body {
+      background-color: black;
+    }
+    .center {
+      margin: auto;
+      width: 50%;
+      color: white;
+
+      padding: 10px;
+    }
+
+    .center1 {
+      margin: auto;
+      width: 50%;
+      text-align: center;
+      padding: 10px;
+      word-spacing: 50px;
+    }
+
+    .left {
+      float: left;
+      width: 33%;
+      text-align: center;
+      padding: 1px;
+      height: 600px;
+    }
+
+    .right {
+      float: right;
+      
+      width: 33%;
+      padding: 1px;
+      height: 600px;
+    }
+
+  h1, h2, a {
+    color:white;
+  } 
+   .head
+   {
+    padding-top: 60px;
+   }
+   
+   
+
+</style>
+
+
+
+
+</head>
+
+<body>
+    <p class = "center1">
+        <a href = "proj.html">Home</a> 
+        <a href = "Lesson1.html">Lesson_1</a>
+        <a href = "Lesson2.html">Lesson_2</a>
+        <a href = "Lesson3.html">Lesson_3</a>
+        <a href = "Lesson4.html">Lesson_4</a>
+        <a href = "Lesson6.html">Lesson_6</a>
+      
+    
+    
+    
+    
+    </p>
+<div class = "center">
+    
+    <h1><strong>Web Scraping</strong></h1>
+    <p>Web scraping is a technique to automatically access and extract large amounts of information from a website, which can save a huge amount of time and effort. In this article, we will go through an easy example of how to automate downloading hundreds of files from the New York MTA. This is a great exercise for web scraping beginners who are looking to understand how to web scrape. Web scraping can be slightly intimidating, so this tutorial will break down the process of how to go about the process.</p>
+    <h1><strong>New York MTA Data</strong></h1>
+    <p>We will be downloading turnstile data from this site:</p>
+    <p><a href="http://web.mta.info/developers/turnstile.html">http://web.mta.info/developers/turnstile.html</a></p>
+    <p>Turnstile data is compiled every week from May 2010 to present, so hundreds of .txt files exist on the site. Below is a snippet of what some of the data looks like. Each date is a link to the .txt file that you can download.</p>
+    <img src="list.jpg" alt="Object Orientaited Programming"  >
+    <p><img src="RackMultipart20220408-4-k9347l_html_80043f0c05379403.png" alt=""></p>
+    <p>It would be torturous to manually right click on each link and save to your desktop. Luckily, there's web-scraping!</p>
+    <h1><strong>Important notes about web scraping:</strong></h1>
+    <ol>
+    <li>Read through the website's Terms and Conditions to understand how you can legally use the data. Most sites prohibit you from using the data for commercial purposes.</li>
+    <li>Make sure you are not downloading data at too rapid a rate because this may break the website. You may potentially be blocked from the site as well.</li>
+    </ol>
+    <h1><strong>Inspecting the Website</strong></h1>
+    <p>The first thing that we need to do is to figure out where we can locate the links to the files we want to download inside the multiple levels of HTML tags. Simply put, there is a lot of code on a website page and we want to find the relevant pieces of code that contains our data. If you are not familiar with HTML tags, refer to W3Schools <a href="http://www.w3schools.com/">Tutorials</a>. It is important to understand the basics of HTML in order to successfully web scrape.</p>
+    <p>On the website, right click and click on &quot;Inspect&quot;. This allows you to see the raw code behind the site.</p>
+    <p><img src="RackMultipart20220408-4-k9347l_html_45a880f478e06849.png" alt=""></p>
+    <p>Once you've clicked on &quot;Inspect&quot;, you should see this console pop up.</p>
+    <p><img src="RackMultipart20220408-4-k9347l_html_4e90e13d1854a7ef.png" alt=""></p>
+    <p><strong>Console</strong></p>
+    <p>Notice that on the top left of the console, there is an arrow symbol.</p>
+    <p><img src="RackMultipart20220408-4-k9347l_html_9f186d3991017622.png" alt=""></p>
+    <p><img src="RackMultipart20220408-4-k9347l_html_9f186d3991017622.png" alt=""></p>
+    <p>If you click on this arrow and then click on an area of the site itself, the code for that particular item will be highlighted in the console. I've clicked on the very first data file, Saturday, September 22, 2018 and the console has highlighted in blue the link to that particular file.</p>
+    <p>&amp;lt;a href=&quot;data/nyct/turnstile/turnstile_180922.txt&quot;&amp;gt;Saturday, September 22, 2018&amp;lt;/a&amp;gt;</p>
+    <p>Notice that all the .txt files are inside the &amp;lt;a&amp;gt; tag following the line above. As you do more web scraping, you will find that the &amp;lt;a&amp;gt; is used for hyperlinks.</p>
+    <p>Now that we've identified the location of the links, let's get started on coding!</p>
+    <h1><strong>Python Code</strong></h1>
+    <p>We start by importing the following libraries.</p>
+    <p>import requests
+    import urllib.request
+    import time
+    from bs4 import BeautifulSoup</p>
+    <p>Next, we set the url to the website and access the site with our requests library.</p>
+    <p>url = '<a href="http://web.mta.info/developers/turnstile.html'">http://web.mta.info/developers/turnstile.html'</a>
+    response = requests.get(url)</p>
+    <p>If the access was successful, you should see the following output:</p>
+    <p><img src="RackMultipart20220408-4-k9347l_html_92add50040976466.png" alt=""></p>
+    <p>Next we parse the html with BeautifulSoup so that we can work with a nicer, nested BeautifulSoup data structure. If you are interested in learning more about this library, check out the <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeatifulSoup documentation</a>.</p>
+    <p>soup = BeautifulSoup(response.text, &quot;html.parser&quot;)</p>
+    <p>We use the method .findAll to locate all of our &amp;lt;a&amp;gt; tags.</p>
+    <p>soup.findAll('a')</p>
+    <p>This code gives us every line of code that has an &amp;lt;a&amp;gt; tag. The information that we are interested in starts on line 36. Not all links are relevant to what we want, but most of it is, so we can easily slice from line 36. Below is a subset of what BeautifulSoup returns to us when we call the code above.</p>
+    <p><img src="RackMultipart20220408-4-k9347l_html_5e50a31acada6795.png" alt=""></p>
+    <p><strong>subset of all &amp;lt;a&amp;gt; tags</strong></p>
+    <p>Next, let's extract the actual link that we want. Let's test out the first link.</p>
+    <p>one_a_tag = soup.findAll('a')[36]
+    link = one_a_tag['href']</p>
+    <p>This code saves 'data/nyct/turnstile/turnstile_180922.txt' to our variable link. The full url to download the data is actually ' <strong>http://web.mta.info/developers/</strong> data/nyct/turnstile/turnstile_180922.txt' which I discovered by clicking on the first data file on the website as a test. We can use our urllib.request library to download this file path to our computer. We provide request.urlretrieve with two parameters: file url and the filename. For my files, I named them &quot;turnstile_180922.txt&quot;, &quot;turnstile_180901&quot;, etc.</p>
+    <p>download_url = 'http://web.mta.info/developers/'+ link
+    urllib.request.urlretrieve(download_url,'./'+link[link.find('/turnstile_')+1:])</p>
+    <p>Last but not least, we should include this line of code so that we can pause our code for a second so that we are not spamming the website with requests. This helps us avoid getting flagged as a spammer.</p>
+    <p>time.sleep(1)</p>
+    <p>Now that we understand how to download a file, let's try downloading the entire set of data files with a for loop. The code below contains the entire set of code for web scraping the NY MTA turnstile data.</p>
+    
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Learn OOP with Python</title>
+  <style>
+    body {
+      background-color: black;
+    }
+    .center {
+      margin: auto;
+      width: 50%;
+      color: white;
+
+      padding: 10px;
+    }
+
+    .center1 {
+      margin: auto;
+      width: 50%;
+      text-align: center;
+      padding: 10px;
+      word-spacing: 50px;
+    }
+
+    .left {
+      float: left;
+      width: 33%;
+      text-align: center;
+      padding: 1px;
+      height: 600px;
+    }
+
+    .right {
+      float: right;
+      
+      width: 33%;
+      padding: 1px;
+      height: 600px;
+    }
+
+  h1, h2, a {
+    color:white;
+  } 
+   .head
+   {
+    padding-top: 60px;
+   }
+   
+   
+
+</style>
+
+
+
+
+</head>
+
+<body>
+    <p class = "center1">
+        <a href = "proj.html">Home</a> 
+        <a href = "Lesson1.html">Lesson_1</a>
+        <a href = "Lesson3.html">Lesson_3</a>
+        <a href = "Lesson4.html">Lesson_4</a>
+        <a href = "Lesson5.html">Lesson_5</a>
+        <a href = "Lesson6.html">Lesson_6</a>
+      
+    
+    
+    
+    
+    </p>
+<div class = "center">
+    <h1>Functions in Python</h1>
+    <h2>Brief Introduction:</h2>
+    <p>(Source: <a href="https://www.w3schools.com/python/python_functions.asp">https://www.w3schools.com/python/python_functions.asp</a>)</p>
+    <ul>
+    <li>A function is a block of code which only runs when it is called.It performs a specific task.</li>
+    <li>You can pass data, known as parameters, into a function.</li>
+    <li>Objects that are passed in are passed by reference, data like strings and numbers do not change</li>
+    <li>A function can return data as a result to the calling function.</li>
+    </ul>
+    <h3>Python Sample program to display the use of functions:</h3>
+    <pre><code>#This function checks whether the entered number is a multiple of 5 or not:
+    def check( x ):
+        if (x % 5 == 0):
+            print &quot;Yes&quot;
+        else:
+            print &quot;No&quot;
+    #Driver code
+    check(2)
+    check(3)
+    </code></pre>
+    <p>In python we can also assign functions to variables</p>
+    <pre><code>evenOdd = check
+    #Driver code
+    evenOdd(2)
+    evenOdd(3)
+    #the output will be same as of previous function calls: check(2) , check(3)
+    
+    </code></pre>
+    <pre><code>#This function will demonstrate that numbers and strings are passed by value:
+        def myNum( x ):
+            x=5
+            print("num inside: ", x)
+        def myString(c):
+            c="no"
+            print("string inside: ", c)
+        #Driver code
+        y=7
+        s = "hi"
+        myNum(y)
+        myString(s)
+        print("num outside: ", y)
+        print("string outside: ", s)
+        #output: 
+        #num inside: 5
+        #num outside: 7
+        #string inside: no
+        #string outside: hi
+        </code></pre>
+        <pre><code>#This function will demonstrate thatobjects are passed by reference:
+            
+            
+            def myList( z ):
+                z[0] = 32    
+            
+            x = [20,30,66]
+            print("Before Function: ", x)
+            myList(x)
+            print("After Function: ", x)
+            #output: 
+            #Before Function: 20,30,66
+            #After Function: 32,30,66
+
+            </code></pre>
+            
+    <h2>Creating a Function</h2>
+    <p>In Python a function is defined using the <code>def</code> keyword:</p>
+    <pre><code>def my_function():
+      print(&quot;I am a Function&quot;)
+    </code></pre>
+    <h2>Calling a Function</h2>
+    <p>To call a function, use the function name followed by parenthesis:</p>
+    <pre><code>def my_function():
+      print(&quot;Hello from a function&quot;)
+    
+    my_function()
+    </code></pre>
+    <h4>With this short and crisp refresher on functions in python, the Lesson will now walk you through some in-built functions in python. It is expected that you have preliminary programming knowledge (Iterators, Conditions, Syntax, Semantics, etc.)</h4>
+    <h1>MODULE 1: CREATING  A REMINDER APP</h1>
+    <p>Before heading further to module 1, It is important to know where the functions of python are stored. Python uses the concept of libraries to store functions and classes (later in this course).</p>
+    <h1>The Python Standard Library</h1>
+    <p>(Source:<a href="https://docs.python.org/3/library/">https://docs.python.org/3/library/</a>)</p>
+    <p>While <a href="https://docs.python.org/3/reference/index.html#reference-index">The Python Language Reference</a> describes the exact syntax and semantics of the Python language, this library reference manual describes the standard library that is distributed with Python. It also describes some of the optional components that are commonly included in Python distributions.</p>
+    <h3>Task 1: Create a python script to set a reminder in about a fix duration of time that opens a youtube video using the concept of functions in python.</h3>
+    <p>(This can be used to take a break from long and continuous computer hours)</p>
+    <h3>Assistance:</h3>
+    <ul>
+    <li>Python Standard Library has a module called 'webbrowser'</li>
+    <li>Check on Resources to get the solution</li>
+    </ul>
+    <h3>TASK 2: There is a message to be decoded. There have been pictures of file format .jpg which have to be renamed in such a way that the digits in the names have to be removed which upon sorting would show a message. There is a folder containing all those images along this lesson. Write a python script to do the needful</h3>
+    <p>(Wait What??....Yes! This can be playful with your friends.)</p>
+    <h3>Assistance:</h3>
+    <ul>
+    <li>Python Standard Library has a module called 'os'</li>
+    <li>Use listdir function inside the os module</li>
+    <li>Refer to the Internet for complete documentation of os module</li>
+    <li>Check on Resources to get the solution</li>
+    </ul>
+    <h1>About Used Modules:</h1>
+    <ul>
+    <li><a href="https://docs.python.org/2/library/webbrowser.html">https://docs.python.org/2/library/webbrowser.html</a></li>
+    <li><a href="https://docs.python.org/2/library/os.html">https://docs.python.org/2/library/os.html</a></li>
+    </ul>
+    <p>Refer to <a href="https://data-flair.training/blogs/python-built-in-functions/">https://data-flair.training/blogs/python-built-in-functions/</a> for a list of python inbuilt functions and explore their potential.</p>
+    
+
+</div>
+
+
+</body>
+</html>
