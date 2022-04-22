@@ -58,11 +58,11 @@ Below are what your outputs should look like for your example code.
 
 Example 1:
 
-![Example 1](https://github.com/nhagen2019/Teach_OOP_py/blob/master/Lesson%207:%20Polymorphism/poly%20output%201.PNG) 
+![Example 1](https://github.com/nhagen2019/Teach_OOP_py/blob/master/Lesson%204:%20Polymorphism/poly%20output%201.PNG) 
  
 Example 2:
 
-![Example 2](https://github.com/nhagen2019/Teach_OOP_py/blob/master/Lesson%207:%20Polymorphism/poly%20output%202.PNG)
+![Example 2](https://github.com/nhagen2019/Teach_OOP_py/blob/master/Lesson%204:%20Polymorphism/poly%20output%202.PNG)
  
 
 **Do It Yourself:**
@@ -126,7 +126,7 @@ for country in (USA, GER):
 ```
 **Do It Yourself Example Output:**
 
-![DIY Example](https://github.com/nhagen2019/Teach_OOP_py/blob/master/Lesson%207:%20Polymorphism/Poly%20DIY%20output.PNG)
+![DIY Example](https://github.com/nhagen2019/Teach_OOP_py/blob/master/Lesson%204:%20Polymorphism/Poly%20DIY%20output.PNG)
 
 Sources:
 
