@@ -1,21 +1,25 @@
 Polymorphism is the concept that a single entity can represent many different types within a program. It allows programmers to define methods within the child class while having the same name as what is defined in the parent class. Essentially, the same function can be used for different types. In Python you can use different class methods, functions, or objects to define polymorphism. Below are some examples of polymorphism and how it is used within python.
 
-Example 1: Basic Polymorphism
-Below are some basic examples of polymorphism. The first example uses integers, and the second example uses strings.
+**Example 1: Basic Polymorphism**
 
+Below are some basic examples of polymorphism. The first example uses integers, and the second example uses strings.
+```
 #polymorphism with numbers
 number1 = 1
 number2 = 4
 print(number1 + number2)
-
+```
+```
 #polymorphism with strings
 string1 = "Hello"
 string2 = "There"
 print(string1 + " " + string2)
+```
 
-Example 2: Polymorphism Within Classes
+**Example 2: Polymorphism Within Classes**
+
 Below is an example of polymorphism within a class. It takes two different types of objects, cars and trains, and uses the same variable names to describe them.
-
+```
 class Car:
     def __init__(item, name, color):
         item.name = name
@@ -46,19 +50,28 @@ train1 = Train("Steam Engine", "Yellow")
 for vehicle in (car1, car2, train1):
     vehicle.type()
     vehicle.speed()
+```
 
-Example Outputs:
+**Example Outputs:**
+
 Below are what your outputs should look like for your example code.
 
 Example 1:
+
+![Example 1](https://github.com/nhagen2019/Teach_OOP_py/blob/master/Lesson%207:%20Polymorphism/poly%20output%201.PNG) 
  
 Example 2:
+
+![Example 2](https://github.com/nhagen2019/Teach_OOP_py/blob/master/Lesson%207:%20Polymorphism/poly%20output%202.PNG)
  
 
-Do It Yourself:
+**Do It Yourself:**
+
 Now that you have tried these examples, create a class using polymorphism which compares two countries, the United States and Germany. Define their capitals, primary language, and GDP. 
 
-Do It Yourself Solution:
+
+**Do It Yourself Solution:**
+```
 #This creates the United States Class
 class unitedStates:
     #defines the variables for capital, language, and gdp
@@ -110,10 +123,13 @@ for country in (USA, GER):
     country.cap()
     country.lang()
     country.gdp()
+```
+**Do It Yourself Example Output:**
 
-
+![DIY Example](https://github.com/nhagen2019/Teach_OOP_py/blob/master/Lesson%207:%20Polymorphism/Poly%20DIY%20output.PNG)
 
 Sources:
-https://www.geeksforgeeks.org/polymorphism-in-python/
-https://www.programiz.com/python-programming/polymorphism
 
+https://www.geeksforgeeks.org/polymorphism-in-python/
+
+https://www.programiz.com/python-programming/polymorphism
