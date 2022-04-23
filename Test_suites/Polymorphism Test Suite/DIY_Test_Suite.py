@@ -73,35 +73,4 @@ def test1():
     else:
         print("Fail")
 
-def test2():
-    print("Test 2 (Values Not Historically Accurate, For Testing Purposes Only):")
-    #sets the values for the United States class
-    USA = unitedStates("New York", "Spanish", "$5")
-
-    #sets the values for the Germany class
-    GER = germany("Aachen", "French", "$3")
-
-    i = 0
-    testcases = [("New York", "Spanish", "$5"), ("Aachen", "French", "$3")]
-    flag = True
-    for country in (USA, GER):
-        a = country.cap()
-        b = country.lang()
-        c = country.gdp()
-        #print(a)
-        #print(b)
-        #print(c)
-        #print(testcases[i])
-        #print((a,b,c))
-        if(testcases[i] != (a,b,c)):
-            flag = False
-        i = i + 1
-    
-    if(flag == True):
-        print("Pass")
-    else:
-        print("Fail")
-
 test1()
-print("\n")
-test2()
