@@ -1,6 +1,3 @@
-from cgi import test
-import unittest
-
 #creates the car class
 class Car:
     #defines the variables for name and color and links them to car
@@ -58,61 +55,5 @@ def test1():
         print("Pass")
     else:
         print("Fail")
-    
-def test2():
-    print("Test 2:")
-    car1 = Car("Semi Truck", "Yellow")
-    car2 = Car("Camry", "Orange")
-
-    train1 = Train("Bullet Train", "Black")
-
-    i = 0
-    testcases = [("Yellow", "Semi Truck"), ("Orange", "Camry"), ("Black", "Bullet Train",)]
-    flag = True
-    for vehicle in (car1, car2, train1):
-        a,b = vehicle.type()
-        c = vehicle.speed()
-        #print(a)
-        #print(b)
-        #print(testcases[i])
-        #print((a,b))
-        if(testcases[i] != (a,b)):
-            flag = False
-        i = i + 1
-    
-    if(flag == True):
-        print("Pass")
-    else:
-        print("Fail")
-
-def test3():
-    print("Test 3:")
-    car1 = Car("Elantra", "Black")
-    car2 = Car("Expedition", "White")
-
-    train1 = Train("Freight Train", "Orange")
-
-    i = 0
-    testcases = [("Black", "Elantra"), ("White", "Expedition"), ("Orange", "Freight Train",)]
-    flag = True
-    for vehicle in (car1, car2, train1):
-        a,b = vehicle.type()
-        c = vehicle.speed()
-        #print(a)
-        #print(b)
-        #print(testcases[i])
-        #print((a,b))
-        if(testcases[i] != (a,b)):
-            flag = False
-        i = i + 1
-    
-    if(flag == True):
-        print("Pass")
-    else:
-        print("Fail")
 
 test1()
-print("\n")
-test2()
-print("\n")
-test3()
